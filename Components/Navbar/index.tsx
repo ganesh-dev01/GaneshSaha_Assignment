@@ -12,7 +12,8 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <AppBar position="static" className={styles.navbar} elevation={0}>
+    <AppBar position="static" className={styles.navbar} elevation={0}
+    style={{ backgroundColor: "transparent" }}>
       <Toolbar className={styles.toolbar}>
         {isMobile && (
           <IconButton edge="start" className={styles.menuButton} onClick={handleDrawerToggle}>
