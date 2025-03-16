@@ -61,7 +61,6 @@
 }
 
 @media (max-width: 768px) {
-
   .navbar .navLinks,
   .navbar .authButtons {
     display: none;
