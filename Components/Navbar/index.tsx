@@ -3,16 +3,32 @@ import { AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, Lis
 import MenuIcon from "@mui/icons-material/Menu";
 import styles from "@/styles/Navbar.module.css";
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  backgroundColor?: string;
+  padding?: string;
+  boxShadow?: string;
+  fontFamily?: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({
+  backgroundColor = 'rgba(255, 255, 255, 0.14)',
+  padding = '10px 20px',
+  boxShadow = 'none',
+  fontFamily = 'Prompt, sans-serif'
+}) => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 768px)"); 
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   return (
-    <AppBar position="static" className={styles.navbar} elevation={0}  id="navbar">
+    <AppBar
+      position="static"
+      style={{ backgroundColor, padding, boxShadow, fontFamily }}
+      elevation={0}
+    >
       <Toolbar className={styles.toolbar}>
         {isMobile && (
           <IconButton edge="start" className={styles.menuButton} onClick={handleDrawerToggle}>
@@ -20,24 +36,24 @@ const Navbar: React.FC = () => {
           </IconButton>
         )}
 
-        <Typography variant="h6" className={styles.logo}>
+        <Typography variant="h6" className={styles.logo} style={{ fontFamily }}>
           ON TRIP
         </Typography>
 
         {!isMobile && (
           <Box className={styles.navLinks}>
-            <Button className={styles.navItem}>Home</Button>
-            <Button className={styles.navItem}>About</Button>
-            <Button className={styles.navItem}>Discover</Button>
-            <Button className={styles.navItem}>Blog</Button>
-            <Button className={styles.navItem}>Contact</Button>
+            <Button className={styles.navItem} style={{ fontFamily }}>Home</Button>
+            <Button className={styles.navItem} style={{ fontFamily }}>About</Button>
+            <Button className={styles.navItem} style={{ fontFamily }}>Discover</Button>
+            <Button className={styles.navItem} style={{ fontFamily }}>Blog</Button>
+            <Button className={styles.navItem} style={{ fontFamily }}>Contact</Button>
           </Box>
         )}
 
         {!isMobile && (
           <Box className={styles.authButtons}>
-            <Button className={styles.loginBtn}>Login</Button>
-            <Button className={styles.registerBtn}>Register</Button>
+            <Button className={styles.loginBtn} style={{ fontFamily }}>Login</Button>
+            <Button className={styles.registerBtn} style={{ fontFamily }}>Register</Button>
           </Box>
         )}
 
@@ -77,4 +93,5 @@ const Navbar: React.FC = () => {
     </AppBar>
   );
 };
+
 export default Navbar;

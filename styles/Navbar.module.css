@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
 
-#navbar {
-  background-color: rgba(255, 255, 255, 0.14);
-  padding: 10px 20px;
-  box-shadow: none !important;
-  font-family: 'Prompt', sans-serif;
-}
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.14);
   padding: 10px 20px;
   box-shadow: none !important;
+  font-family: 'Prompt', sans-serif;
 }
 
 .navbar .toolbar {
