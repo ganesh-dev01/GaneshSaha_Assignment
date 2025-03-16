@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           PaperProps={{
-            style: { width: isMobile ? '30vw' : '250px' }
+            style: { width: isMobile ? '80vw' : '250px' }
           }}
         >
           <List className={styles.drawer}>
