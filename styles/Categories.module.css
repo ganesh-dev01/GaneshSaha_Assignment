@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.categories_main {
+    width: 100%;
+    height: 100vh;
+    height: auto;
+    background-color: #E2EBF0;
+    padding: 20px;
+}
+
+.categories_main .heading {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    text-align: center;
+    padding: 3vh 0;
+    font-size: 35px;
+}
+
+.categories_main .featureBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+}
+
+.featureBox .feature_item {
+    width: 10%;
+    min-width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.feature_item img {
+    width: 80px;
+    height: 80px;
+}
+
+.featureBox .feature_item:nth-child(1) {
+    border: 3px solid #B57373E5;
+}
+
+
+.featureBox .feature_item:nth-child(2) {
+    border: 3px solid #61B1B1;
+}
+
+.featureBox .feature_item:nth-child(3) {
+    border: 3px solid #F3A52F;
+}
+
+.featureBox .feature_item:nth-child(4) {
+    border: 3px solid #AD5DC9E5;
+}
+
+.featureBox .feature_item:nth-child(5) {
+    border: 3px solid #2E9EEFE5;
+}
+
+
+
+@media (max-width: 768px) {
+    .categories_main .heading {
+        font-size: 28px;
+    }
+
+    .featureBox .feature_item {
+        width: 20%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .categories_main .heading {
+        font-size: 24px;
+    }
+
+    .featureBox .feature_item {
+        width: 45%;
+        min-width: 120px;
+    }
+
+    .feature_item img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+.categories_main .place_box {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.place_box .place_imagebox {
+    width: 70%;
+    height: 80%;
+}
+
+.place_imagebox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.place_box .textBox {
+    position: absolute;
+    top: 60%;
+    width: 60%;
+    height: 40%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.textBox .PlaceBox {
+    width: 25%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    border-right: 1px solid black;
+}
+
+.textBox .placeInfoBox {
+    width: 75%;
+    height: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.placeInfoBox .placeInfo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.placeInfoBox .btnBox {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btnBox .btn {
+    width: 100px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #425E6F;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .place_box .textBox {
+        top: 50%;
+        width: 70%;
+        height: 45%;
+    }
+    .textBox .PlaceBox {
+        font-size: 22px;
+    }
+    .placeInfoBox .placeInfo {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .place_box .textBox {
+        top: 45%;
+        width: 80%;
+        height: 50%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .textBox .PlaceBox {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid black;
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    .textBox .placeInfoBox {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        align-items: center;
+    }
+    .placeInfoBox .placeInfo {
+        font-size: 16px;
+        text-align: center;
+    }
+    .placeInfoBox .btnBox {
+        justify-content: center;
+        margin-top: 10px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .place_box .textBox {
+        top: 40%;
+        width: 90%;
+        height: 60%;
+    }
+    .textBox .PlaceBox {
+        font-size: 18px;
+    }
+    .placeInfoBox .placeInfo {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .place_box .textBox {
+        top: 35%;
+        width: 100%;
+        height: 70%;
+    }
+    .textBox .PlaceBox {
+        font-size: 16px;
+    }
+    .placeInfoBox .placeInfo {
+        font-size: 14px;
+    }
+    .btnBox .btn {
+        width: 80px;
+        height: 25px;
+    }
+}
